@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Website Laundry</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Selamat datang di Website Laundry</h1>
+      </div>
+
+      <div class="order-section">
+        <h2>Paket Laundry Tersedia:</h2>
+        <div class="menu">
+          <ul>
+            <li><img src="package_a.jpg" alt="" />cuci basah</li>
+            <li><img src="package_b.jpg" alt="" />cuci basah</li>
+            <li><img src="package_c.jpg" alt="" />cuci basah</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="order-section">
+        <h2>Form Order Laundry:</h2>
+        <form id="order-form" action="process_order.php" method="POST">
+          <label for="name">Nama:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="package">Paket:</label>
+          <select id="package" name="package" required>
+            <option value="">Pilih Paket</option>
+            <option value="Cuci Setrika">Cuci Setrika</option>
+            <option value="Cuci Kering">Cuci Kering</option>
+            <option value="Cuci Basah">Cuci Basah</option>
+          </select>
+
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+
+      <div id="alert-message" class="alert"></div>
+
+      <div class="footer">
+        &copy; 2023 Website Laundry. All rights reserved.
+        <div><a href="view_orders.php">Tampilkan Pesanan</a></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
